@@ -21,9 +21,9 @@ for(n in 1:length(choosen_idx))
     variance_2
     quartz(width=3,height=6.5)
     t[i]<-nktop_snps_symbol[n]
-    t0<-qplot(NKG7,RBC) + geom_point(color=ifelse(nksnp_data[,choosen_idx[n]]=='0',"#86B875",rgb(0.75, 0.75, 0.75,alpha=.5)),size=3)+labs(title=nktop_snps_symbol[choosen_idx[n]])
+    t0<-qplot(NKG7,RBC) + geom_point(color=ifelse(nksnp_data[,choosen_idx[n]]=='0',"#86B875",'gray'),size=3)+labs(title=nktop_snps_symbol[choosen_idx[n]])
     t1<-qplot(NKG7,RBC) + geom_point(color=ifelse(nksnp_data[,choosen_idx[n]]=='1','#4CB9CC','gray'),size=3) 
-    t2<-qplot(NKG7,RBC) + geom_point(color=ifelse(nksnp_data[,choosen_idx[n]]=='2','#CD99D8',rgb(0.75, 0.75, 0.75,alpha=.5)),size=3)
+    t2<-qplot(NKG7,RBC) + geom_point(color=ifelse(nksnp_data[,choosen_idx[n]]=='2','#CD99D8','gray'),size=3)
     multiplot(t0,t1,t2)
     remove(t0,t1,t2)
     i=i+1
