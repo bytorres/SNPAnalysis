@@ -34,7 +34,13 @@ for(n in 1:29)
   
 }
 
-#snp_query_topresid<-NCBI_snp_query(t)
+
+snp_query_topresid<-NCBI_snp_query(t)
+tableau_heterosmall<-nksnp_data[,choosen_idx]
+View(tableau_heterosmall)
+tableau_heterosmall<-cbind(tableau_heterosmall,NKG7,RBC)
+write.table(tableau_heterosmall,'06_24_15_SigSNPS.txt',sep='\t')
+write.tablea(snp_query_topresid,'06_24_15_SignSNPSNCBI.txt',sep='\t')
 
 
 ## Check how many of the hits have more than ten samples equal to 2
